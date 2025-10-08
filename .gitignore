@@ -1,0 +1,36 @@
+# Large 3D model files (generated outputs)
+*.obj
+*.stl
+*.mtl
+
+# Large GeoTIFF files
+*.tif
+*.tiff
+
+# Texture files
+*.jpg
+*.jpeg
+*.png
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
