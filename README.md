@@ -82,10 +82,39 @@ For flat terrain (< 1% slope), use higher Z_SCALE values:
 - 2,006,592 triangular faces
 - Real-world scale: 833m × 1653m × 6.7m (with exaggeration)
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## License
 
-Free to use for any purpose.
+MIT License - feel free to use this tool for academic or commercial purposes.
+
+## Citation
+
+If you use this tool in your research, please cite:
+
+```
+Heidari, R. (2025). 3D Terrain Model Generator. GitHub repository: https://github.com/roghiheidari/terrain-3d-generator
+```
+
+## Support
+
+If you encounter any issues or have questions:
+- Open an issue on GitHub
+- Check the documentation files for detailed information
+- Ensure your DEM and zonemap files are valid GeoTIFF format
 
 ## Author
 
-Created for DEM + zonemap visualization and 3D printing workflows.
+Roghayeh Heidari
+- PhD Candidate, Computer Science
+- University of Calgary
+- Email: roghi1024@gmail.com
+- GitHub: [@roghiheidari](https://github.com/roghiheidari)
+
+## Acknowledgments
+
+Developed for GIS researchers and 3D visualization workflows.
+
+Made with ❤️ for the research community
