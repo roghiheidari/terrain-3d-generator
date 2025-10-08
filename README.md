@@ -49,38 +49,39 @@ pip install -r requirements.txt
 
 ## Color Mapping
 
-### Red-Green Gradient (Current)
-- Dark pixels (0) → Red
-- Bright pixels (255) → Green
-- Smooth gradient in between
+The tool supports flexible color mapping:
+
+### Red-Green Gradient
+- Maps grayscale values to a continuous color gradient
+- Dark pixels (low values) → Red
+- Bright pixels (high values) → Green
+- Smooth transitions for continuous data
 
 ### Custom Zone Colors
-Edit the `get_colors_gradient()` function to use discrete zone colors instead.
+Modify the `get_colors_gradient()` function to implement:
+- Discrete zone-based coloring
+- Custom color palettes
+- Multi-band color schemes
 
 ## Vertical Exaggeration
 
-For flat terrain (< 1% slope), use higher Z_SCALE values:
-- `Z_SCALE = 10.0` - Subtle
-- `Z_SCALE = 20.0` - Balanced (recommended)
-- `Z_SCALE = 40.0` - Dramatic
+Adjust the `Z_SCALE` parameter to control terrain relief:
+- `Z_SCALE = 1.0` - Real-world scale
+- `Z_SCALE = 10.0` - 10x exaggeration
+- `Z_SCALE = 20.0` - 20x exaggeration
+- Higher values recommended for flat terrain visualization
 
-## Documentation
+## Technical Specifications
 
-- **QUICK_REFERENCE.md** - One-page summary
-- **COORDINATE_SYSTEMS.md** - Technical details about coordinate systems
-- **WHY_IT_WAS_FLAT.md** - Explanation of vertical exaggeration
-- **FINAL_SUMMARY.md** - Complete guide
+### Input Requirements
+- DEM: GeoTIFF format with elevation data
+- Zonemap: GeoTIFF format with classification or continuous values
+- Coordinate system: UTM or any projected coordinate system
 
-## Examples
-
-### Input
-- DEM: 834 × 1654 pixels, 1m resolution, UTM coordinates
-- Zonemap: Grayscale values 0-255
-
-### Output
-- 1,008,581 vertices with RGB colors
-- 2,006,592 triangular faces
-- Real-world scale: 833m × 1653m × 6.7m (with exaggeration)
+### Output Formats
+- **OBJ**: Wavefront format with vertex colors
+- **STL**: Binary STL for 3D printing
+- Preserves real-world coordinates and scale
 
 ## Contributing
 
@@ -102,15 +103,14 @@ Heidari, R. (2025). 3D Terrain Model Generator. GitHub repository: https://githu
 
 If you encounter any issues or have questions:
 - Open an issue on GitHub
-- Check the documentation files for detailed information
 - Ensure your DEM and zonemap files are valid GeoTIFF format
+- Verify GDAL installation and dependencies
 
 ## Author
 
 Roghayeh Heidari
 - PhD Candidate, Computer Science
 - University of Calgary
-- Email: roghi1024@gmail.com
 - GitHub: [@roghiheidari](https://github.com/roghiheidari)
 
 ## Acknowledgments
